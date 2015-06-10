@@ -59,6 +59,10 @@ function cargarnombrejugador ()
 	}
 	});
 	}
+	$('.cuadro').on('tap',function(){
+		flash($(this));
+		audio.play($(this).attr('id'));
+	});
 	});
 }); 
 });
