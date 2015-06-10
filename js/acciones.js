@@ -30,6 +30,10 @@ function cargarnombrejugador ()
 		var alto=(pantalla-encabezado-pie)/2;
 		$('.cuadro').height( alto);	
 	});
+	$('.cuadro').on('tap',function(){
+		flash($(this));
+		audio.play($(this).attr('id'));
+	});
 	//$('.cuadro').on('vmousedown',function (){
 		//$('#pantalla').append(quien($(this).attr('id')));
 		//$(this).addClass('pulsado');
@@ -59,10 +63,7 @@ function cargarnombrejugador ()
 	}
 	});
 	}
-	$('.cuadro').on('tap',function(){
-		flash($(this));
-		audio.play($(this).attr('id'));
-	});
+	
 	});
 }); 
 });
